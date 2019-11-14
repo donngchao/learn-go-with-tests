@@ -7,3 +7,15 @@ type Dictionary map[string]string
 func (d Dictionary) Search(word string) string {
 	return d[word]
 }
+
+type Telephone map[string]int
+
+func (t Telephone) Search(name string) int {
+	return t[name]
+}
+
+type Price map[int]int
+
+func (p Price) GetPrice(tag int) int {
+	return p[tag]
+}

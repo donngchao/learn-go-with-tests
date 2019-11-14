@@ -9,4 +9,10 @@ func TestAdder(t *testing.T) {
 	if sum != expected {
 		t.Errorf("expected '%d' but got '%d'", expected, sum)
 	}
+
+	sumOfThreeNum := addThreeNumbers(3,4,5)
+	expectedSumOfThreeNum := 12
+	if sumOfThreeNum != expectedSumOfThreeNum{
+		t.Errorf("expected %d but got %d",expectedSumOfThreeNum,sumOfThreeNum)
+	}
 }
