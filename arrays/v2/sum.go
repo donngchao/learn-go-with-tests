@@ -8,3 +8,11 @@ func Sum(numbers [5]int) int {
 	}
 	return sum
 }
+
+func Sum2(numbersTest [6]int) int{
+	sum2 := 0
+	for _,number := range numbersTest{
+		sum2 += number
+	}
+	return sum2
+}

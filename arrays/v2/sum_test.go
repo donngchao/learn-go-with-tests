@@ -12,4 +12,16 @@ func TestSum(t *testing.T) {
 	if got != want {
 		t.Errorf("got %d want %d given, %v", got, want, numbers)
 	}
+
+	/**
+	use func Sum2()
+	*/
+	numbers2 := [6]int{2,2,2,3,3,3}
+	got2 := Sum2(numbers2)
+	want2 := 15
+
+	if got2 != want2 {
+		t.Errorf("got %d wan %d,%v",got2,want2,numbers2)
+	}
+
 }

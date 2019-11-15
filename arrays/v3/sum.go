@@ -8,3 +8,12 @@ func Sum(numbers []int) int {
 	}
 	return sum
 }
+
+// sumFloat calculates the total from a slice of float numbers
+func sumFloat(floatNum []float64) float64{
+	sum2 := 0.0
+	for _,v := range floatNum{
+		sum2 += v
+	}
+	return sum2
+}
