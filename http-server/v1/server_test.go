@@ -22,3 +22,20 @@ func TestGETPlayers(t *testing.T) {
 	})
 
 }
+
+func TestMiniServer(t *testing.T) {
+	request, _ := http.NewRequest(http.MethodGet, "/", nil)
+	response := httptest.NewRecorder()
+
+	MiniServer(response, request)
+
+	t.Run("returns simple output", func(t *testing.T) {
+		got := response.Body.String()
+		want := "simple output"
+
+		if got != want {
+			t.Errorf("got %q, want %q", got, want)
+		}
+	})
+
+}
