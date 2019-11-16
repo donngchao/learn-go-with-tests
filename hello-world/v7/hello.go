@@ -7,6 +7,8 @@ const french = "French"
 const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const frenchHelloPrefix = "Bonjour, "
+const chineseHelloPrefix = "你好, "
+const china = "chinese"
 
 // Hello returns a personalised greeting in a given language
 func Hello(name string, language string) string {
@@ -21,6 +23,8 @@ func Hello(name string, language string) string {
 		prefix = frenchHelloPrefix
 	case spanish:
 		prefix = spanishHelloPrefix
+	case china:
+		prefix = chineseHelloPrefix
 	}
 
 	return prefix + name
