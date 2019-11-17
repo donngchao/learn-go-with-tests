@@ -43,3 +43,11 @@ type Triangle struct {
 func (c Triangle) Area() float64 {
 	return (c.Base * c.Height) * 0.5
 }
+// Square needs Width to represent itself, beacuae Width is equal to Length
+type Square struct {
+	Width float64
+}
+// Area returns the area of the square
+func (s Square) Area() float64  {
+	return (s.Width * s.Width)
+}

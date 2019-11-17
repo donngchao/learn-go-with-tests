@@ -12,5 +12,8 @@ func TestRomanNumerals(t *testing.T) {
 }
 
 func ConvertToRoman(arabic int) string {
+	if arabic == 1{
+		return "I"
+	}
 	return "I"
 }

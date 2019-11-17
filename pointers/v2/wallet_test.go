@@ -27,4 +27,17 @@ func TestWallet(t *testing.T) {
 		assertBalance(t, wallet, Bitcoin(10))
 	})
 
+	t.Run("Withdraw test again",func(t *testing.T){
+		wallet := Wallet{balance:Bitcoin(100)}
+		wallet.Withdraw(Bitcoin(10))
+		assertBalance(t,wallet,Bitcoin(90))
+	})
+
+	t.Run("Deposit  test again",func(t *testing.T){
+		wallet := Wallet{balance:Bitcoin(100)}
+		wallet.Deposit(Bitcoin(10))
+		assertBalance(t,wallet,Bitcoin(110))
+	})
+
+
 }

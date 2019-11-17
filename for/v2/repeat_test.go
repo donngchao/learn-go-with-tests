@@ -10,3 +10,16 @@ func TestRepeat(t *testing.T) {
 		t.Errorf("expected %q but got %q", expected, repeated)
 	}
 }
+
+func TestRepeatAnotherTest(t *testing.T) {
+	repeated := Repeat("b")
+	expected := "bbbbb"
+
+	if repeated != expected {
+		t.Errorf("expected %q but got %q", expected, repeated)
+	}
+}
+
+
+
+

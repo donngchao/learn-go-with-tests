@@ -8,3 +8,11 @@ func Repeat(character string) string {
 	}
 	return repeated
 }
+
+func repeatAgain(subStr string) string {
+	var repeatStr string
+	for i:=0 ; i< 6; i++{
+		repeatStr += subStr
+	}
+	return repeatStr
+}
