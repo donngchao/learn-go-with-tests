@@ -26,6 +26,7 @@ func TestGETPlayers(t *testing.T) {
 		map[string]int{
 			"Pepper": 20,
 			"Floyd":  10,
+			"Mike": 50,
 		},
 		nil,
 	}
@@ -49,6 +50,16 @@ func TestGETPlayers(t *testing.T) {
 
 		assertStatus(t, response.Code, http.StatusOK)
 		assertResponseBody(t, response.Body.String(), "10")
+	})
+
+	t.Run("returns Mike's score", func(t *testing.T) {
+		request := newGetScoreRequest("Mike")
+		response := httptest.NewRecorder()
+
+		server.ServeHTTP(response, request)
+
+		assertStatus(t, response.Code, http.StatusOK)
+		assertResponseBody(t, response.Body.String(), "50")
 	})
 
 	t.Run("returns 404 on missing players", func(t *testing.T) {
