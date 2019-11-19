@@ -6,10 +6,17 @@ import (
 
 func TestSearch(t *testing.T) {
 	dictionary := Dictionary{"test": "this is just a test"}
-
+	apple := Dictionary{"apple":"a kind of fruit"}
 	t.Run("known word", func(t *testing.T) {
 		got, _ := dictionary.Search("test")
 		want := "this is just a test"
+
+		assertStrings(t, got, want)
+	})
+
+	t.Run("check apple", func(t *testing.T) {
+		got, _ := apple.Search("apple")
+		want := "a kind of fruit"
 
 		assertStrings(t, got, want)
 	})

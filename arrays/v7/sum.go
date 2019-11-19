@@ -23,3 +23,16 @@ func SumAllTails(numbersToSum ...[]int) []int {
 
 	return sums
 }
+
+func SunAllHeads(numbersToSum ...[]int) []int{
+	var sums []int
+	for _,numbers := range numbersToSum{
+		if len(numbers)==0 {
+			sums = append(sums,0)
+		}else {
+			heads := numbers[:1]
+			sums = append(sums,Sum(heads))
+		}
+	}
+	return sums
+}
