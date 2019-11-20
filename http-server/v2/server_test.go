@@ -21,6 +21,7 @@ func TestGETPlayers(t *testing.T) {
 		map[string]int{
 			"Pepper": 20,
 			"Floyd":  10,
+			"Gimmy":30,
 		},
 	}
 	server := &PlayerServer{&store}
@@ -42,6 +43,12 @@ func TestGETPlayers(t *testing.T) {
 			player:             "Floyd",
 			expectedHTTPStatus: http.StatusOK,
 			expectedScore:      "10",
+		},
+		{
+			name:               "Returns Gimmy's score",
+			player:             "Gimmy",
+			expectedHTTPStatus: http.StatusOK,
+			expectedScore:      "30",
 		},
 		{
 			name:               "Returns 404 on missing players",
