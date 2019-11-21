@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 )
@@ -12,6 +13,11 @@ type InMemoryPlayerStore struct{}
 func (i *InMemoryPlayerStore) GetPlayerScore(name string) int {
 	return 123
 }
+
+func (i *InMemoryPlayerStore) PrintOutScore(name string) {
+	fmt.Println(name)
+}
+
 
 func main() {
 	server := &PlayerServer{&InMemoryPlayerStore{}}

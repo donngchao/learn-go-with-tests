@@ -34,4 +34,9 @@ func TestArea(t *testing.T) {
 		checkArea(t, circle, 314.1592653589793)
 	})
 
+	t.Run("square", func(t *testing.T) {
+		square := Square{10}
+		checkArea(t, square, 100)
+	})
+
 }

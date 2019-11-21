@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 )
-
+//StubPlayerStore is almost an object
 type StubPlayerStore struct {
 	scores map[string]int
 }
@@ -14,6 +14,10 @@ type StubPlayerStore struct {
 func (s *StubPlayerStore) GetPlayerScore(name string) int {
 	score := s.scores[name]
 	return score
+}
+
+func (s *StubPlayerStore) PrintOutScore(name string){
+	fmt.Println(s.scores[name])
 }
 
 func TestGETPlayers(t *testing.T) {
