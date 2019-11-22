@@ -30,3 +30,13 @@ func TestSumAll(t *testing.T) {
 		t.Errorf("got %v want %v", got, want)
 	}
 }
+
+func TestSumAllAgain(t *testing.T) {
+
+	got := SumAll([]int{17, 8}, []int{1, 3,7,1,0})
+	want := []int{25, 12}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("got %v want %v", got, want)
+	}
+}
