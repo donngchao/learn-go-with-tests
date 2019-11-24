@@ -16,3 +16,16 @@ func TestGreet(t *testing.T) {
 		t.Errorf("got %q want %q", got, want)
 	}
 }
+
+
+func TestGreetAgain(t *testing.T) {
+	buffer := bytes.Buffer{}
+	Greet(&buffer, "Jack")
+
+	got := buffer.String()
+	want := "Hello, Jack"
+
+	if got != want {
+		t.Errorf("got %q want %q", got, want)
+	}
+}

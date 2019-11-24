@@ -1,8 +1,10 @@
-package concurrency
+package main
 
 import (
+	"fmt"
 	"net/http"
 )
+
 
 // CheckWebsite returns true if the URL returns a 200 status code, false otherwise
 func CheckWebsite(url string) bool {
@@ -18,7 +20,7 @@ func CheckWebsite(url string) bool {
 	return true
 }
 
-/*func main(){
+func main(){
 	testUrl := "http://www.baidu.com"
 	if CheckWebsite(testUrl){
 		fmt.Println("Now you have the access to baidu")
@@ -26,4 +28,3 @@ func CheckWebsite(url string) bool {
 		fmt.Println("Now you do not have the access to baidu")
 	}
 }
-*/
